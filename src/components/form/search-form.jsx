@@ -14,7 +14,7 @@ const SearchForm = () => {
     const inputEvent = (e) => {
         const { name, value } = e.target;
         setFormData({ [name]: value });
-        if (name == 'question')
+        if (name === 'question')
             dispatch(filterMcqByQuestion(value));
         else
             dispatch(filterMcqByAnswer(value));

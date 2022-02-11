@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import SearchForm from "../../components/form/search-form";
 import Header from "../../components/header";
-import McqItem from "../../components/item/mcq-item";
 import { getMcqs } from '../../http';
 import { setMcqs } from "../../store/mcq-slice";
 import Mcq from "./mcq";
