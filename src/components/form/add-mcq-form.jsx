@@ -31,11 +31,13 @@ const AddMcqForm = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         if (!formData.question) return toast.error('Enter Question');
+        setLoading(true);
         const res = await addMcq(formData);
+        setLoading(false);
         if (res.success) {
             setFormData(initialState);
             setCount(count + 1);
-            toast.success(`${count+1} Question Added`);
+            toast.success(`${count + 1} Question Added`);
         }
 
     }
