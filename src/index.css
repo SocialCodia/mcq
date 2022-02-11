@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.rightAnswer{
+  color: red;
+  font-weight: bold;
+}
+
+.cardAddFormMcq{
+  margin-top: 100px;
+}
+
+.navLink a{
+  text-decoration: none;
+  padding-right: 10px;
+  color: black;
+}
