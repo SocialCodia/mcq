@@ -8,7 +8,6 @@ const UsersPage = () => {
     const [users, setUsers] = useState();
 
     const [loading, setLoading] = useState(true);
-    const [isProcessing, setProcessing] = useState(false);
 
     useEffect(() => {
         (async () => {
