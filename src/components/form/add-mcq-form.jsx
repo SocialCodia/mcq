@@ -10,7 +10,8 @@ const AddMcqForm = () => {
         opTwo: '',
         opThree: '',
         opFour: '',
-        answer: 1
+        answer: 1,
+        verified:true
     }
 
     const [formData, setFormData] = useState(initialState);
@@ -20,6 +21,7 @@ const AddMcqForm = () => {
 
     const inputEvent = (e) => {
         const { name, value } = e.target;
+        console.log({ name, value });
         setFormData((old) => {
             return {
                 ...old,
@@ -42,10 +44,8 @@ const AddMcqForm = () => {
 
     }
 
-
-
     return (
-        <div className="row">
+        <div className="row formContainer1">
             <div className="col-xl-6 offset-xl-3 col-lg-6 offset-lg-6 col-md-8 offset-md-2">
                 <div className="card cardAddFormMcq">
                     <h6 className="card-header text-center">{count < 1 ? 'Add Question' : `${count} Question Added`}</h6>
@@ -68,14 +68,14 @@ const AddMcqForm = () => {
                                     <input type="text" readOnly={loading} onChange={inputEvent} value={formData.opFour} className="form-control" id="opFour" name="opFour" placeholder="Fourth Option" />
                                 </div>
 
-                                <div className="col-xl-6 offset-xl-3 col-lg-6 offset-lg-6 col-md-8 offset-md-2 mb-4">
+                                <div className="col-xl-6 offset-xl-3 col-lg-6 offset-lg-6 col-md-8 offset-md-2 mb-4 d-flex">
                                     <input type="number" readOnly={loading} onChange={inputEvent} value={formData.answer} className="form-control" max={4} min={1} id="answer" name="answer" placeholder="Fourth Option" />
+                                    <i onClick={()=>setFormData((old)=> {return {...old,'verified':!formData.verified}})} class={`fa ${formData.verified ? 'fa-check' : 'fa-remove'} rounded-circle ${formData.verified ? 'bg-primary' : 'bg-danger'} text-white p-2 m-1`}></i>
                                 </div>
                                 <div className="text-center ">
                                     <button disabled={loading} className="btn btn-primary w-100">Add MCQ</button>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>

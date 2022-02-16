@@ -18,9 +18,7 @@ code {
   font-weight: bold;
 }
 
-.cardAddFormMcq{
-  margin-top: 100px;
-}
+
 
 .navLink a{
   text-decoration: none;
@@ -28,7 +26,31 @@ code {
   color: black;
 }
 
+.formContainer1{
+  height: 90vh;
+  align-items: center;
+}
+
 .formContainer{
   height: 100vh;
   align-items: center;
+}
+
+.verifiedBadge{
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.card-body{
+  contain: content;
+}
+
+.addedBy{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  padding: 2px 10px;
 }

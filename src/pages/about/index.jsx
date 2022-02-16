@@ -7,7 +7,7 @@ const AboutUs = () => {
             <Header />
             <div className="container mt-5">
                 <div className="container row mt-5">
-                    <div className="col-xl-6 col-lg-6 col-md-6">
+                    <div className="col-xl-6 col-lg-6 col-md-6 p-3">
                         <div className="card">
                             <div className="card-body">
                                 <h4>API</h4>
@@ -18,7 +18,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-6 col-lg-6 col-md-6">
+                    <div className="col-xl-6 col-lg-6 col-md-6 p-3">
                         <div className="card">
                             <div className="card-body">
                                 <h4>WEB</h4>

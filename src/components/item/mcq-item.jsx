@@ -19,6 +19,12 @@ const McqItem = ({ data, index }) => {
                         <p className={data.opFour === data.answer ? 'rightAnswer' : ''}>4) {data.opFour}</p>
                     </div>
                 </div>
+                <div className="verifiedBadge">
+                    <i class={`fa ${data.verified ? 'fa-check' : 'fa-remove'} rounded-circle ${data.verified ? 'bg-primary' : 'bg-danger'} text-white p-1 m-1`}></i>
+                </div>
+                <div className="addedBy chip">
+                    <strong>Added By : </strong>{data.addedBy}
+                </div>
             </div>
         </div>
     )
